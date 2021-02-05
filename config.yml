@@ -1,0 +1,16 @@
+title: My firts
+description: My first
+template:
+  repo: my-firts-template
+  name: my-firts
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
